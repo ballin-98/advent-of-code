@@ -23,3 +23,14 @@ def readTwoInts(filePath):
             array1.append(int(split[0]))
             array2.append(int(split[1]))
     return array1, array2
+
+def readLineOfIntsToArr(filePath):
+    arr = []
+    with open(filePath, "r") as file:
+        for line in file:
+            arr2 = []
+            split = line.split()
+            for num in split:
+                arr2.append(int(num))
+            arr.append(arr2)
+    return arr
